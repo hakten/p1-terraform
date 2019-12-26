@@ -4,3 +4,4 @@ terraform {
     key    = "p1-terraform"
     region = "us-east-1"
   }
+}
