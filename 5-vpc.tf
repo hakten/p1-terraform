@@ -1,7 +1,7 @@
-resource "aws_vpc" "main" {
-  cidr_block       = var.cidr_block
+resource "aws_vpc" "vpc" {
+  cidr_block       = var.cidrblock
 
   tags = {
-    Name = var.vpcname
+    Name = var.mylist[0]
   }
 }
