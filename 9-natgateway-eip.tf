@@ -1,4 +1,4 @@
-resource "aws_nat_gateway" "nat-ohio" {
+resource "aws_nat_gateway" "natgw" {
   subnet_id     = aws_subnet.pub-1.id
   allocation_id = aws_eip.eip.id
 }
