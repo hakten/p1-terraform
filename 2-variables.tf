@@ -6,4 +6,7 @@ variable "vpc-name" {
   default = "TerraformVPC"
 }
 
+variable "az" {
+  default = ["us-east-2a","us-east-2b","us-east-2c"]
+}
 
