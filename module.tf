@@ -1,3 +1,6 @@
 module "mymodule" {
-  source = "./source"
+  source = "./first-vpc"
+}
+module "mymodule" {
+  source = "./second-vpc"
 }
