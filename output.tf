@@ -1,4 +1,4 @@
-output "vpc-id" {
+output "vpc-idsd" {
   value = module.module-first-vpc.vpc-id
 }
 # output "first-vpc-cidr-block" {
