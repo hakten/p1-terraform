@@ -1,5 +1,5 @@
 output "vpc-id" {
-  value = module.module-first-vpc.aws_vpc.vpc.id
+  value = module.module-first-vpc.vpc-id
 }
 # output "first-vpc-cidr-block" {
 #   value = module.module-first-vpc.aws_vpc.vpc.cidr_block
