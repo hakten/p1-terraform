@@ -1,5 +1,5 @@
 output "first-vpc-id" {
-  value = "lslsl"
+  value = aws_vpc.vpc.id
 }
 # output "first-vpc-cidr-block" {
 #   value = module.module-first-vpc.aws_vpc.vpc.cidr_block
