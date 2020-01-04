@@ -8,5 +8,5 @@ output "second-vpc-id" {
   value = module.module-second-vpc.aws_vpc.vpc.id
 }
 output "second-vpc-cidr-block" {
-  value = module-second-vpc.aws_vpc.vpc.cidr_block
+  value = aws_vpc.vpc.cidr_block
 }
