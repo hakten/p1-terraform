@@ -1,4 +1,4 @@
-output "first-vpc-id" {
+output "vpc-id" {
   value = module.module-first-vpc.aws_vpc.vpc.id
 }
 # output "first-vpc-cidr-block" {
