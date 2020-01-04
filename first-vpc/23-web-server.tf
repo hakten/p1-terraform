@@ -5,7 +5,7 @@ resource "aws_instance" "web" {
   key_name        = aws_key_pair.deployer.key_name
   vpc_security_group_ids = [aws_security_group.web.id,aws_security_group.ssh.id]
 
-  user_data = file("userdata-web")
+  user_data = file("./first-vpc/userdata-wb")
   
   tags = {
     Name = "Web"
