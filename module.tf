@@ -4,3 +4,6 @@ module "module-first-vpc" {
 module "module-second-vpc" {
   source = "./second-vpc"
 }
+module "module-second-vpc" {
+  source = "./third-peering"
+}
