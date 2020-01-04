@@ -8,5 +8,5 @@ output "second-vpc-id" {
   value = module.module-second-vpc.vpc-id
 }
 output "second-vpc-cidr-block" {
-  value = module-second-vpc.vpc-cidr-block
+  value = module.module-second-vpc.vpc-cidr-block
 }
