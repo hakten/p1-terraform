@@ -6,8 +6,8 @@ module "vpc" {
   source = "./vpc-module"
 
 vpc-cidr    = "10.0.0.0/16"
-vpc-name    = "wp"
-environment = "test"
+vpc-name    = "Wordpress"
+environment = "Test"
 
 }
 
