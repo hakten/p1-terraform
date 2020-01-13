@@ -261,8 +261,8 @@ resource "aws_autoscaling_group" "master-us-east-1c-masters-prod-huseyinakten-ne
 resource "aws_autoscaling_group" "nodes-prod-huseyinakten-net" {
   name                 = "nodes.prod.huseyinakten.net"
   launch_configuration = "${aws_launch_configuration.nodes-prod-huseyinakten-net.id}"
-  max_size             = 3
-  min_size             = 3
+  max_size             = 5
+  min_size             = 5
   vpc_zone_identifier  = ["${aws_subnet.us-east-1a-prod-huseyinakten-net.id}", "${aws_subnet.us-east-1b-prod-huseyinakten-net.id}", "${aws_subnet.us-east-1c-prod-huseyinakten-net.id}"]
 
   tag = {
