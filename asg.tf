@@ -9,7 +9,7 @@ module "asg" {
 
   image_id        = "ami-02eac2c0129f6376b"
   instance_type   = "t2.micro"
-  #security_groups = ["sg-12345678"]
+  security_groups = [aws_security_group.ssh-new]
 
   ebs_block_device = [
     {
