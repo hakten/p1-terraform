@@ -1,5 +1,5 @@
-resource "aws_security_group" "ssh-new" { 
-  name        = "ssh" 
+resource "aws_security_group" "ssh-super" { 
+  name        = "ssh-super" 
   description = "Allow SSH inbound traffic" 
 
   ingress { 
