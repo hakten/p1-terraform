@@ -8,7 +8,7 @@ resource "aws_s3_bucket" "environment-backend-buckets" {
   acl    = "private"
 
   versioning {
-    enabled = true
+    enabled = false
   }
   tags = {
     Project     = var.project
