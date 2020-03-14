@@ -1,7 +1,7 @@
 
 s3_folder_region    = "eu-west-1"                   #Will be used to set backend.tf
 s3_bucket           = "t-s3-backend"              #Will be used to set backend.tf
-s3_folder_project   = "aws-eks"              #Will be used to set backend.tf
+s3_folder_project   = "dev-aws-eks"              #Will be used to set backend.tf
 s3_folder_type      = "state"                     #Will be used to set backend.tf
 s3_tfstate_file     = "infrastructure.tfstate"      #Will be used to set backend.tf
 
