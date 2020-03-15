@@ -1,4 +1,5 @@
 resource "null_resource" "login" {
+    depends_on = ["module.my-cluster"]
     provisioner "local-exec" {
     command = "aws eks --region ${var.region} update-kubeconfig --name ${var.cluster_name}"
     }
@@ -8,20 +9,28 @@ resource "null_resource" "login" {
 ## kubectl should be installed
 
 # resource "null_resource" "login" {
+#   depends_on = ["module.my-cluster"]
 #   triggers = {
 #     always_run = "${timestamp()}"
 #   }
-#   depends_on = ["module.my-cluster"]
-
-#  provisioner "local-exec" {
+#     provisioner "local-exec" {
 #     command = "sudo yum install epel-release -y"
 #   }
-#   provisioner "local-exec" {
+#     provisioner "local-exec" {
 #     command = "sudo yum install python-pip -y"
 #   }
-#   provisioner "local-exec" {
+#     provisioner "local-exec" {
 #     command = "sudo pip install awscli"
 #   }
+#     provisioner "local-exec" {
+#     command = "curl -o aws-iam-authenticator https://amazon-eks.s3-us-west-2.amazonaws.com/1.14.6/2019-08-22/bin/linux/amd64/aws-iam-authenticator"
+#   } 
+#     provisioner "local-exec" {
+#     command = "sudo chmod +x aws-iam-authenticator"
+#   }
+#     provisioner "local-exec" {
+#     command = "sudo mv aws-iam-authenticator /bin"
+#   }   
 #     provisioner "local-exec" {
 #     command = "aws eks --region ${var.region} update-kubeconfig --name ${var.cluster_name}"
 #   }
@@ -33,15 +42,6 @@ resource "null_resource" "login" {
 #   }
 #     provisioner "local-exec" {
 #     command = "mv kubectl /bin"
-#   }
-#     provisioner "local-exec" {
-#     command = "curl -o aws-iam-authenticator https://amazon-eks.s3-us-west-2.amazonaws.com/1.14.6/2019-08-22/bin/linux/amd64/aws-iam-authenticator"
-#   }
-#     provisioner "local-exec" {
-#     command = "sudo chmod +x aws-iam-authenticator"
-#   }
-#     provisioner "local-exec" {
-#     command = "sudo mv aws-iam-authenticator /bin"
 #   }
 
 # }
