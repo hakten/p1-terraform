@@ -7,6 +7,7 @@ resource "null_resource" "login" {
 
 ## aws cli should be installed
 ## kubectl should be installed
+## if they are not installed please comment out below local-exec null resuorces, it will install them
 
 #  resource "null_resource" "install" {
 #  when       = "create"
